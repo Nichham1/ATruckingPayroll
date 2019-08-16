@@ -3,7 +3,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 using System;
 using System.Web;
-using System.Web.UI.WebControls;
+using ATruckingPayroll;
 
 namespace WebFormsIdentity
 {
@@ -15,7 +15,9 @@ namespace WebFormsIdentity
             {
                 if (User.Identity.IsAuthenticated)
                 {
-                    StatusText.Text = string.Format("Hello {0}!!", User.Identity.GetUserName());
+                    //StatusText.Text = string.Format("Hello {0}!!", User.Identity.GetUserName());
+                    const string Url = "~/Home/Index";
+                    Response.Redirect(url: Url);
                     LoginStatus.Visible = true;
                     LogoutButton.Visible = true;
                 }
@@ -47,8 +49,7 @@ namespace WebFormsIdentity
             }
         }
 
-        protected void SignOut(object sender, EventArgs e)
-        {
+        protected void SignOut(object sender, EventArgs e){
             var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
             authenticationManager.SignOut();
             Response.Redirect("~/Login.aspx");

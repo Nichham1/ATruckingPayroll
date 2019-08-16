@@ -168,6 +168,13 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Models\Adminstrator.cs">
       <DependentUpon>Atpay.tt</DependentUpon>
     </Compile>
@@ -224,6 +231,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
     <Content Include="Models\Atpay.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Atpay.edmx</DependentUpon>
