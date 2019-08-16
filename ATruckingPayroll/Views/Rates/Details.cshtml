@@ -1,0 +1,58 @@
+﻿@model ATruckingPayroll.Models.Rate
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Rate</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StageDesID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StageDesID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Driver.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Driver.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Driver1.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Driver1.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StageDesc.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StageDesc.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
