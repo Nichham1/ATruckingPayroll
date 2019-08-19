@@ -178,6 +178,18 @@
     <Compile Include="Models\Adminstrator.cs">
       <DependentUpon>Atpay.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\AspNetRole.cs">
+      <DependentUpon>Atpay.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUser.cs">
+      <DependentUpon>Atpay.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserClaim.cs">
+      <DependentUpon>Atpay.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserLogin.cs">
+      <DependentUpon>Atpay.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Atpay.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -193,6 +205,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Atpay.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\C__MigrationHistory.cs">
+      <DependentUpon>Atpay.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Driver.cs">
       <DependentUpon>Atpay.tt</DependentUpon>
     </Compile>
@@ -206,9 +221,6 @@
       <DependentUpon>Atpay.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>Atpay.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\USER.cs">
       <DependentUpon>Atpay.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

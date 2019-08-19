@@ -18,7 +18,7 @@ namespace ATruckingPayroll.Controllers
             return View(drivers.ToList());
         }
 
-        // GET: Drivers/Details/5
+        // GET: Drivers/Details/5b
         public ActionResult Details(int? id)
         {
             if (id == null)

@@ -12,13 +12,12 @@ namespace ATruckingPayroll.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class USER
+    public partial class AspNetUserLogin
     {
-        public int Userid { get; set; }
-        public string Firstname { get; set; }
-        public string Lastname { get; set; }
-        public string Usernme { get; set; }
-        public string EmailAddress { get; set; }
-        public string Password { get; set; }
+        public string LoginProvider { get; set; }
+        public string ProviderKey { get; set; }
+        public string UserId { get; set; }
+    
+        public virtual AspNetUser AspNetUser { get; set; }
     }
 }

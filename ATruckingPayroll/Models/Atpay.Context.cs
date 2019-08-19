@@ -26,11 +26,15 @@ namespace ATruckingPayroll.Models
         }
     
         public virtual DbSet<Adminstrator> Adminstrators { get; set; }
-        public virtual DbSet<Driver> Drivers { get; set; }
         public virtual DbSet<Payroll> Payrolls { get; set; }
         public virtual DbSet<Rate> Rates { get; set; }
         public virtual DbSet<StageDesc> StageDescs { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<USER> USERs { get; set; }
+        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
+        public virtual DbSet<AspNetRole> AspNetRoles { get; set; }
+        public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
+        public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
+        public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
+        public virtual DbSet<Driver> Drivers { get; set; }
     }
 }
