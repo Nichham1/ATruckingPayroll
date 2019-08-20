@@ -15,8 +15,10 @@ namespace WebFormsIdentity
             {
                 if (User.Identity.IsAuthenticated)
                 {
-                    StatusText.Text = string.Format("Hello {0}!!", User.Identity.GetUserName());
-                   LoginStatus.Visible = true;
+
+                    Response.Redirect("~/Home/Index");
+                    // StatusText.Text = string.Format("Hello {0}!!", User.Identity.GetUserName());
+                    LoginStatus.Visible = true;
                     LogoutButton.Visible = true;
                 }
                 else

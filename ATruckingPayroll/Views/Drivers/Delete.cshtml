@@ -34,16 +34,15 @@
         <dd>
             @Html.DisplayFor(model => model.Rate.Name)
         </dd>
+        
+      <dt>
+               @Html.DisplayNameFor(model => model.Rate1.Name)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Rate1.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Rate1.Name)
-        </dd>
-
-    </dl>
+            <dd>
+                @Html.DisplayFor(model => model.Rate1.Name)
+            </dd>
+       </dl>
 
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()

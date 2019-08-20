@@ -19,5 +19,6 @@ namespace ATruckingPayroll.Models
         public int RateID { get; set; }
     
         public virtual Rate Rate { get; set; }
+        public virtual Rate Rate1 { get; set; }
     }
 }

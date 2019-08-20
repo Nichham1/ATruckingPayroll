@@ -11,7 +11,7 @@
         <EntityTypeShape EntityType="AdersonDBModel.StageDesc" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="AdersonDBModel.sysdiagram" Width="1.5" PointX="4.625" PointY="4.5" IsExpanded="true" />
         <AssociationConnector Association="AdersonDBModel.FK_Rates_StageDesID" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="AdersonDBModel.C__MigrationHistory" Width="1.5" PointX="8.875" PointY="4.625" />
+        <EntityTypeShape EntityType="AdersonDBModel.C__MigrationHistory" Width="1.5" PointX="6.75" PointY="4.5" />
         <EntityTypeShape EntityType="AdersonDBModel.AspNetRole" Width="1.5" PointX="1.875" PointY="13.375" />
         <EntityTypeShape EntityType="AdersonDBModel.AspNetUserClaim" Width="1.5" PointX="6.375" PointY="14.5" />
         <EntityTypeShape EntityType="AdersonDBModel.AspNetUserLogin" Width="1.5" PointX="6.375" PointY="11.875" />
@@ -19,8 +19,9 @@
         <AssociationConnector Association="AdersonDBModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
         <AssociationConnector Association="AdersonDBModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
         <AssociationConnector Association="AdersonDBModel.AspNetUserRoles" />
-        <EntityTypeShape EntityType="AdersonDBModel.Driver" Width="1.5" PointX="7.375" PointY="1.5" />
+        <EntityTypeShape EntityType="AdersonDBModel.Driver" Width="1.5" PointX="6.375" PointY="1.5" />
         <AssociationConnector Association="AdersonDBModel.FK_Drivers_RateID" />
+        <AssociationConnector Association="AdersonDBModel.FK_Rates_DriversID" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

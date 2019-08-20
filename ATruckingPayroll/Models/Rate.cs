@@ -20,5 +20,6 @@ namespace ATruckingPayroll.Models
     
         public virtual StageDesc StageDesc { get; set; }
         public virtual Driver Driver { get; set; }
+        public virtual Driver Driver1 { get; set; }
     }
 }

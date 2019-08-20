@@ -181,6 +181,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Rates_DriversID">
+          <End Role="Drivers" Type="Self.Drivers" Multiplicity="1" />
+          <End Role="Rates" Type="Self.Rates" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Drivers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Rates">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Rates_StageDesID">
           <End Role="StageDesc" Type="Self.StageDesc" Multiplicity="1" />
           <End Role="Rates" Type="Self.Rates" Multiplicity="0..1" />
@@ -226,6 +238,10 @@
             <End Role="Rates" EntitySet="Rates" />
             <End Role="Drivers" EntitySet="Drivers" />
           </AssociationSet>
+          <AssociationSet Name="FK_Rates_DriversID" Association="Self.FK_Rates_DriversID">
+            <End Role="Drivers" EntitySet="Drivers" />
+            <End Role="Rates" EntitySet="Rates" />
+          </AssociationSet>
           <AssociationSet Name="FK_Rates_StageDesID" Association="Self.FK_Rates_StageDesID">
             <End Role="StageDesc" EntitySet="StageDesc" />
             <End Role="Rates" EntitySet="Rates" />
@@ -258,6 +274,7 @@
           <Property Name="StageDesID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="StageDesc" Relationship="Self.FK_Rates_StageDesID" FromRole="Rates" ToRole="StageDesc" />
           <NavigationProperty Name="Driver" Relationship="AdersonDBModel.FK_Drivers_RateID" FromRole="Rate" ToRole="Driver" />
+          <NavigationProperty Name="Driver1" Relationship="AdersonDBModel.FK_Rates_DriversID" FromRole="Rate" ToRole="Driver" />
         </EntityType>
         <EntityType Name="StageDesc">
           <Key>
@@ -320,6 +337,10 @@
           <AssociationSet Name="FK_Drivers_RateID" Association="AdersonDBModel.FK_Drivers_RateID">
             <End Role="Rate" EntitySet="Rates" />
             <End Role="Driver" EntitySet="Drivers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rates_DriversID" Association="AdersonDBModel.FK_Rates_DriversID">
+            <End Role="Driver" EntitySet="Drivers" />
+            <End Role="Rate" EntitySet="Rates" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="C__MigrationHistory">
@@ -421,6 +442,7 @@
           <Property Name="Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="RateID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Rate" Relationship="AdersonDBModel.FK_Drivers_RateID" FromRole="Driver" ToRole="Rate" />
+          <NavigationProperty Name="Rate1" Relationship="AdersonDBModel.FK_Rates_DriversID" FromRole="Driver" ToRole="Rate" />
         </EntityType>
         <Association Name="FK_Drivers_RateID">
           <End Type="AdersonDBModel.Rate" Role="Rate" Multiplicity="1" />
@@ -430,6 +452,18 @@
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="Driver">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rates_DriversID">
+          <End Type="AdersonDBModel.Driver" Role="Driver" Multiplicity="1" />
+          <End Type="AdersonDBModel.Rate" Role="Rate" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Driver">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Rate">
               <PropertyRef Name="Id" />
             </Dependent>
           </ReferentialConstraint>
